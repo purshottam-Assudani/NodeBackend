@@ -3,8 +3,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to DockerHub...
-      - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
-      - REPOSITORY_URI="docker.io/purshottam-Assudani/NodeBackend"
+      - echo "$DOCKERHUB_PASS" | docker login --username "$DOCKERHUB_USER" --password-stdin
+      - REPOSITORY_URI="docker.io/purshottam-assudani/nodebackend"
       - CONTAINER_NAME="backend-container"
       - IMAGE_TAG="latest"
   build:
