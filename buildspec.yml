@@ -4,7 +4,7 @@ phases:
     commands:
       - echo Logging in to DockerHub...
       - echo "$DOCKERHUB_PASS" | docker login --username "$DOCKERHUB_USER" --password-stdin
-      - REPOSITORY_URI="docker.io/purshottam-assudani/nodebackend"
+      - REPOSITORY_URI="https://github.com/purshottam-Assudani/NodeBackend"
       - CONTAINER_NAME="backend-container"
       - IMAGE_TAG="latest"
   build:
